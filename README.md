@@ -4,4 +4,11 @@ Automatically bans any user playing the game when they start playing it.
 
 ## Hosting that thing yourself
 
-Download coming soon, then you'll just need to edit the config with your bot token and you are good to go.
+* Go to the release page
+* Download the latest one
+* Extract the archive
+* Open config.json
+* Replace YOURTOKENHERE by your bot token
+* Save & exit
+
+Run with `java -jar NoFortnite.jar`
