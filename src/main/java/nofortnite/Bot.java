@@ -6,6 +6,7 @@ import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.Game;
+import nofortnite.utils.listeners.MessageReceivedListener;
 import nofortnite.utils.listeners.PresenceListener;
 
 import javax.security.auth.login.LoginException;
@@ -37,6 +38,7 @@ public class Bot {
             try {
                 unholyThingToBan = config.get("unholyThingToBan").getAsString();
                 JDA builder = new JDABuilder(AccountType.BOT).setToken(config.get("token").getAsString())
+                        .addEventListener(new MessageReceivedListener())
                         .addEventListener(new PresenceListener()).setBulkDeleteSplittingEnabled(false).buildBlocking();
                 builder.getPresence().setGame(Game.playing(config.get("activity").getAsString()));
                 System.out.println("Bot started, watching for " + unholyThingToBan);

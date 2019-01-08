@@ -11,7 +11,7 @@ public class PresenceListener extends ListenerAdapter {
     @Override
     public void onUserUpdateGame(UserUpdateGameEvent event) {
         User scum = event.getUser(); // baddie
-        if(event.getNewGame() != null && event.getNewGame().toString().contains(Bot.getUnholyThingToBan())) {
+        if(event.getNewGame() != null && event.getNewGame().toString().toLowerCase().contains(Bot.getUnholyThingToBan().toLowerCase())) {
             try {
                 event.getJDA().getUserById(scum.getId()).openPrivateChannel().queue((channel) -> {
                     channel.sendMessage("You've been banned from **" + event.getGuild().getName() + "** cause no one wants kids playing " + Bot.getUnholyThingToBan()).complete();
