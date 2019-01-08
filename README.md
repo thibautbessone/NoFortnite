@@ -12,3 +12,7 @@ Automatically bans any user playing the game when they start playing it.
 * Save & exit
 
 Run with `java -jar NoFortnite.jar`
+
+
+
+Original idea by Cancerous#4859, developed by me
