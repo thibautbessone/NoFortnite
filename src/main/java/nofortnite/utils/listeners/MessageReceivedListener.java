@@ -8,7 +8,7 @@ public class MessageReceivedListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         if(!event.getAuthor().isBot() && event.getMessage().getContentRaw().toLowerCase().contains(Bot.getUnholyThingToBan().toLowerCase())) {
-            event.getTextChannel().sendMessage("Stop taking about "  + Bot.getUnholyThingToBan() + ". If you ever dare to play that, I'm going to ban you :rage:").queue();
+            event.getTextChannel().sendMessage("Stop talking about "  + Bot.getUnholyThingToBan() + ". If you ever dare to play that, I'm going to ban you :rage:").queue();
         }
     }
 }
